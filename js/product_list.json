@@ -1481,6 +1481,12 @@
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
             ]
         },
+        "Brochure PDF": {
+        "name": "CISS Brochure",
+        "desc": "Click to view our brochure PDF with detailed information.",
+        "img": "img/pdf-icon.png",   
+        "pdf": "pdf/CISS_Brochure.docx"
+        },
         "Samvad": {
             "describe": [
                 "C DOT has developed an easy to use application in the form of ‘SAMVAD’ an Android and iOS App to provide Secure Call & Chat for sharing of text, image, audio and video files.  <br>    <br>  The users will benefit from the availability of data on their mobiles any time, anywhere, while still enjoying the privileges of a secure and self hosted network.  <br>    <br>  Signup on Samvad  Terms of Use  Privacy Policy"
