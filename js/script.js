@@ -153,6 +153,7 @@ function showProductsInCategory(categoryName) {
     const product = productsData[categoryName][productName];
     const productCard = document.createElement("div");
     productCard.className = "product";
+    productCard.onclick = () => showProductDetails(categoryName,productName);
     productCard.innerHTML = `
       <div class="product-img">
         <img src="${productsData[categoryName].image}" alt="${productName}">
@@ -278,6 +279,7 @@ function showCategories() {
   Object.keys(productsData).forEach(categoryName => {
     const category = document.createElement("div");
     category.className = "category";
+    category.onclick = () => showProductsInCategory(categoryName);
     category.innerHTML = `
       <div class="category-img">
         <img src="${productsData[categoryName].image}" alt="${categoryName}">
