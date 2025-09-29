@@ -179,7 +179,7 @@ function showProductDetails(categoryName, productName) {
 
   details.style.display = "block";
   detailName.textContent = productName;
-  detailImg.src = product.img || productsData[categoryName].image;
+  detailImg.src = product.image || productsData[categoryName].image;
   detailDesc.innerHTML = product.describe ? product.describe[0] : "";
 
   // Clear previous content
