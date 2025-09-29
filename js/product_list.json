@@ -32,7 +32,7 @@
             "ToT Partners": [
                 " <br/>   • Bharat Electronics  <br>    <br/>   • Electronics Corporation India Ltd ( ECIL )   <br>    <br/>   • ITI Limited  <br>    <br/>   • CYIENT limited   <br>    <br/>   • HFCL Group  <br>    <br/>   • S M CREATIVE ELECTRONICS LTD <br/>    <br/>   • TEJAS NETWORKS <br/>    <br/>   • United Telecoms Limited"
             ],
-            "image" : ["img/optical.jpg"]
+            "image" : ["img/optical/gpon.jpg"]
             
         },
         "Mobile Fronthaul System": {
@@ -65,7 +65,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/optical/mobileFronthaul.jpg"]
         },
         "Qsafe 200": {
             "describe": [
@@ -97,7 +98,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/optical/qsafe200.jpg"]
         },
         "OTN Cross Connect": {
             "describe": [
@@ -129,7 +131,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/optical/otnCrossConnect.jpg"]
         },
         "Quantum Key Distribution (QKD)": {
             "describe": [
@@ -161,7 +164,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/optical/qkd.png"]
         },
         "XGS PON": {
             "describe": [
@@ -193,7 +197,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/optical/xgs-pon.jpg"]
         },
         "Remote Fiber Monitoring System (RFMS)": {
             "describe": [
@@ -225,7 +230,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/rfms.png"]
         },
         "DWDM": {
             "describe": [
@@ -257,7 +263,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/optical/dwdm.png"]
         },
         "WDAN": {
             "describe": [
@@ -289,7 +296,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/optical/wdan.jpg"]
         }
     },
     "Switching & Routing": {
@@ -324,7 +332,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/switch_route/CTX-4000.png"]
         },
         "VIRAJ 100 Server": {
             "describe": [
@@ -356,7 +365,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/switch_route/viraj-100.jpg"]
         },
         "C DOT CSX 10 8 Port Ethernet Switch": {
             "describe": [
@@ -388,7 +398,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/switch_route/CSX-10.png"]
         },
         "Aggregator Switch": {
             "describe": [
@@ -423,7 +434,8 @@
             ],
             "ToT Partners": [
                 "Bharat Electronics Limited (BEL) is the ToT partner for Aggregator Switch."
-            ]
+            ],
+            "image" : ["img/switch_route/CAGG-24P.png"]
         },
         "24 Port Layer 2 Aggregation Switch": {
             "describe": [
@@ -490,7 +502,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/switch_route/CSX-200.png"]
         },
         "C DOT CSX 210 Layer2/Layer3 Aggregation switch": {
             "describe": [
@@ -522,7 +535,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/switch_route/CSX-210.png"]
         },
         "Branch Router": {
             "describe": [
@@ -700,8 +714,8 @@
             ]
         }
     },
-    "Wireless Technolog": {
-        "image": "img/wireless.jpg", 
+    "Wireless Technology": {
+        "image": "img/wireless.jpg",
         "4G LTE Solution": {
             "describe": [
                 "The C DOT LTE A solution is a standards based, packet only core network and an eNodeB with a simplified and modular architecture, providing support for and mobility between multiple heterogeneous access networks including (E UTRAN and LTE Advanced air interface), 3GPP legacy systems (for example GERAN or UTRAN) but also non 3GPP systems (for example WiMAX or cdma2000, WiFi).  <br>    <br>  This solution enables the mobile network operator to offer a new set of services to the users and enables products and network deployments to be built for bandwidth intensive services. It provides IP connectivity to terminals for both data and voice services.  <br>    <br>  C DOT LTE A solution comprises of the following network entities:   <br>    <br/>   • e NodeB  <br>    <br/>   • Mobility Management Entity (C DOT MME)  <br>    <br/>   • Home Subscriber Server (HSS)  <br>    <br/>   • Serving Gateway (SGW)  <br>    <br/>   • Packet Data Network Gateway (P GW)  <br>    <br/>   • Policy And Charging Control Entity (PCRF)"
@@ -736,16 +750,16 @@
         },
         "Bharat 5G Standalone Solution": {
             "describe": [
-                "C DOT’s 5G Standalone (SA) 5G Solution, a 'Made in India' solution acts as an enabler for nextgen 5G applications and services. C DOT’s 5G SA Solution can deliver 5G data, voice and mission critical services (MCX) to its customer. The solution can meet organization/ campus deployment needs and can also be used for industry deployments."
+                "C DOT's 5G Standalone (SA) 5G Solution, a 'Made in India' solution acts as an enabler for nextgen 5G applications and services. C DOT's 5G SA Solution can deliver 5G data, voice and mission critical services (MCX) to its customer. The solution can meet organization/ campus deployment needs and can also be used for industry deployments."
             ],
             "application": [
-                " <br/>   • Enhanced mobile broadband (eMBB)   Augmented Reality / Virtual Reality, video calling, virtual meetings, UHD video streaming, ﬁxed wireless broadband access in dense areas.   <br>    <br/>   • Massive machine type communications (mMTC)   Wearables, healthcare monitoring, vehicle to infrastructure smart home, smart cities, industrial automation.  <br>    <br/>   • Ultra Reliable Low latency communications (uRLLC)   Industrial robots, remote surgery, vehicle to pedestrian, vehicle to vehicle."
+                " <br/>   • Enhanced mobile broadband (eMBB)   Augmented Reality / Virtual Reality, video calling, virtual meetings, UHD video streaming, fixed wireless broadband access in dense areas.   <br>    <br/>   • Massive machine type communications (mMTC)   Wearables, healthcare monitoring, vehicle to infrastructure smart home, smart cities, industrial automation.  <br>    <br/>   • Ultra Reliable Low latency communications (uRLLC)   Industrial robots, remote surgery, vehicle to pedestrian, vehicle to vehicle."
             ],
             "specification": [
-                "5G RAN specifications*  <br>    <br/>   •\t3GPP Release 16   <br>    <br/>   •\tBand N78   <br>    <br/>   •\t2TR, 4TR, 8TR  (32TR also supported in CU DU)   <br>    <br/>   •\tCarrier Aggregation : 2CC   <br>    <br/>   •\tSCS: 30kHz   <br>    <br/>   •\tBW: upto 200MHz   <br>    <br/>   •\t40W / 46 dBm per channel   <br>    <br/>   •\tIP65   <br>    <br/>   •\tORAN compliant 7.2x category A/B split   <br>    <br>    <br>  *Delivered through a collaborative approach along with C DOT partners"
+                "5G RAN specifications*  <br>    <br/>   • 3GPP Release 16   <br>    <br/>   • Band N78   <br>    <br/>   • 2TR, 4TR, 8TR  (32TR also supported in CU DU)   <br>    <br/>   • Carrier Aggregation : 2CC   <br>    <br/>   • SCS: 30kHz   <br>    <br/>   • BW: upto 200MHz   <br>    <br/>   • 40W / 46 dBm per channel   <br>    <br/>   • IP65   <br>    <br/>   • ORAN compliant 7.2x category A/B split   <br>    <br>    <br>  *Delivered through a collaborative approach along with C DOT partners"
             ],
             "features": [
-                "5G Core features  <br>    <br/>   •\t3GPP release 16 compliant  <br>    <br/>   •\tUses Service Based Architecture   <br>    <br/>   •\tControl and User Plane Separation   <br>    <br/>   •\tHigh performance User Plane  <br>    <br/>   •\tData/ VoNR/ MCX services   <br>    <br/>   •\tSupport for MEC   <br>    <br/>   •\tNetwork Slicing   <br>    <br/>   •\tWeb based dashboard for subscriber provisioning and conﬁguration   <br>    <br/>   •\tCan run on premise or in any cloud environment (public, private or hybrid)  <br>    <br/>   •\tHas integrated with gNodeBs of multiple vendors"
+                "5G Core features  <br>    <br/>   • 3GPP release 16 compliant  <br>    <br/>   • Uses Service Based Architecture   <br>    <br/>   • Control and User Plane Separation   <br>    <br/>   • High performance User Plane  <br>    <br/>   • Data/ VoNR/ MCX services   <br>    <br/>   • Support for MEC   <br>    <br/>   • Network Slicing   <br>    <br/>   • Web based dashboard for subscriber provisioning and configuration   <br>    <br/>   • Can run on premise or in any cloud environment (public, private or hybrid)  <br>    <br/>   • Has integrated with gNodeBs of multiple vendors"
             ],
             "Event and Awards": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
@@ -764,7 +778,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/bharat5G-standalone.jpg"]
         },
         "5GRAN": {
             "describe": [
@@ -796,11 +811,12 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/5Gran.jpg"]
         },
         "C TARANG": {
             "describe": [
-                "C DOT C Tarang™ series of Radio Access Network technology provides a complete end to end carrier grade solution targeted at Operators of LTE/5G NSA networks. C DOT RAN is macro class solution consisting of baseband units (BBU), Remote Radio Head (RRH), RAN Element Management System (EMS), and Network Management System (NMS).   <br/>       <br/>    The RAN technology has been indigenously developed, matured over multiple generations and is proven in multiple telecom operator networks (TSPs) and LTE for Railways (LTE R). C DOT RAN is proven for mass manufacturability and has partnered with multiple technology transfer partner like ITI, BEL and ECIL who have started supplying the RAN to different customers.   <br/>       <br/>    C DOT’s well developed supply chain ensures RAN technology supply from trusted sources."
+                "C DOT C Tarang™ series of Radio Access Network technology provides a complete end to end carrier grade solution targeted at Operators of LTE/5G NSA networks. C DOT RAN is macro class solution consisting of baseband units (BBU), Remote Radio Head (RRH), RAN Element Management System (EMS), and Network Management System (NMS).   <br/>       <br/>    The RAN technology has been indigenously developed, matured over multiple generations and is proven in multiple telecom operator networks (TSPs) and LTE for Railways (LTE R). C DOT RAN is proven for mass manufacturability and has partnered with multiple technology transfer partner like ITI, BEL and ECIL who have started supplying the RAN to different customers.   <br/>       <br/>    C DOT's well developed supply chain ensures RAN technology supply from trusted sources."
             ],
             "application": [
                 "Commercial and Private 4G/5G deployments   <br/>    Mission Critical Services   <br/>    IOT"
@@ -828,11 +844,12 @@
             ],
             "ToT Partners": [
                 "Bharat Eletronics, Electronics Corporation India Ltd ( ECIL ) , ITI Limited are the ToT partners for C DOT C Tarang RAN technology.  "
-            ]
+            ],
+            "image": ["img/wireless/ctarang.jpg"]
         },
         "TEJ 3600 C DOT Wi Fi 6 Access Point": {
             "describe": [
-                "Wi Fi 6 or IEEE 802.11ax is the best in class and latest standard for Wi Fi technology. The standard is focused on improving Wi Fi performance in dense and crowded environments and can provide 4x (four times) increase in the data throughput and support very low latency AR/VR scenarios.   <br>  Wi Fi 6 technology is very suitable to provide efficient access network to meet 5G indoor hotspot use cases and dense urban requirements unlicensed band spectrum in 2.4 GHz and 5GHz.   <br>  Tej – 3600 C DOT Wi Fi 6 Access point is indigenously designed and developed product suitable for both indoor/outdoor and urban/ rural requirements such as schools, Enterprises offices, Smart City, Railway Stations, Malls, Stadiums, and Industry 4.0. It is suitable for Point to Point and multi point configuration in rural areas and hotspot configuration in dense urban areas."
+                "Wi Fi 6 or IEEE 802.11ax is the best in class and latest standard for Wi Fi technology. The standard is focused on improving Wi Fi performance in dense and crowded environments and can provide 4x (four times) increase in the data throughput and support very low latency AR/VR scenarios.   <br>  Wi Fi 6 technology is very suitable to provide efficient access network to meet 5G indoor hotspot use cases and dense urban requirements unlicensed band spectrum in 2.4 GHz and 5GHz.   <br>  Tej - 3600 C DOT Wi Fi 6 Access point is indigenously designed and developed product suitable for both indoor/outdoor and urban/ rural requirements such as schools, Enterprises offices, Smart City, Railway Stations, Malls, Stadiums, and Industry 4.0. It is suitable for Point to Point and multi point configuration in rural areas and hotspot configuration in dense urban areas."
             ],
             "application": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product"
@@ -860,7 +877,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/TEJ-Wi-Fi_Access_Point.png"]
         },
         "C DOT Wi Fi Gigabit Router (WGR) Indoor Access Point": {
             "describe": [
@@ -892,7 +910,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/Gigabit_Router.png"]
         },
         "C DOT Wi Fi 5 Dualband Outdoor Access Point (DOA)": {
             "describe": [
@@ -924,7 +943,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/DOA_WGR.png"]
         },
         "C DOT LTE Routers": {
             "describe": [
@@ -956,7 +976,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/LTE_Router.png"]
         },
         "C Sat Fi": {
             "describe": [
@@ -966,10 +987,10 @@
                 "Agricultural Services   <br/>    Telemedicine Services   <br/>    Financial / Banking Services   <br/>    Education Services   <br/>    Entertainment / Infotainment Services   <br/>    Communication network during disaster"
             ],
             "specification": [
-                "BBWT Wi Fi terminal supports IEEE 802.11a/b/g/n/AC 2x2 up to 4x4 MIMO technology   <br/>    Dual Power feed from C DOT Green Power Supply unit   <br/>    VSAT Modem or Smart LNB ( with 20” to 30” Dish Antenna ) for the Backhaul connectivity   <br/>    Backhaul link from any communication Satellite may be operating in C/Ku/Ka band"
+                "BBWT Wi Fi terminal supports IEEE 802.11a/b/g/n/AC 2x2 up to 4x4 MIMO technology   <br/>    Dual Power feed from C DOT Green Power Supply unit   <br/>    VSAT Modem or Smart LNB ( with 20  to 30 Dish Antenna ) for the Backhaul connectivity   <br/>    Backhaul link from any communication Satellite may be operating in C/Ku/Ka band"
             ],
             "features": [
-                "To provide voice and data services using Satellite Backhaul link.   <br/>    Supports concurrent VOIP voice calls using low bits codec.   <br/>    Provision of local content servers to cater for static content locally over C DOT Manoranjan Platform.   <br/>    The services can be offered by any TSP/ISP’s i.e. BSNL/CSC etc. with the support of locals of the villages i.e Village representatives or VLEs enrolled under CSC."
+                "To provide voice and data services using Satellite Backhaul link.   <br/>    Supports concurrent VOIP voice calls using low bits codec.   <br/>    Provision of local content servers to cater for static content locally over C DOT Manoranjan Platform.   <br/>    The services can be offered by any TSP/ISP's i.e. BSNL/CSC etc. with the support of locals of the villages i.e Village representatives or VLEs enrolled under CSC."
             ],
             "Event and Awards": [
                 "<ul><li>10th edition Aegis Graham Bell Awards for Innovative Telecom Product</li><li>ELCINA defEnnovation Awards 2019 for Excellence in R&amp;D , Large Category</li></ul> "
@@ -988,17 +1009,18 @@
             ],
             "ToT Partners": [
                 "CYIENT, Bharat Eletronics Ltd, ITI Limited are the ToT partners for C DOT C Sat Fi technology."
-            ]
+            ],
+            "image": ["img/wireless/csat-fi.jpg"]
         },
         "Mini PDO": {
             "describe": [
-                "C DOT miniPDO is a very efficient, low powered and cost effective indigenously designed WANI compliant Public Data Office. It is designed to meet growing demand of Wi Fi hotspots in our country  <br>    <br>  First user will download C WANI App from play store and will register with WANI framework. Registered user can connect to nearest WANI compliant WiFi access point.  <br>    <br>  The advantage of miniPDO is that the VLE’s CAPEX reduces substantially as the management functionality of Wi Fi network and authentication of users is done as per WANI framework. This framework supports interoperability among operators."
+                "C DOT miniPDO is a very efficient, low powered and cost effective indigenously designed WANI compliant Public Data Office. It is designed to meet growing demand of Wi Fi hotspots in our country  <br>    <br>  First user will download C WANI App from play store and will register with WANI framework. Registered user can connect to nearest WANI compliant WiFi access point.  <br>    <br>  The advantage of miniPDO is that the VLE's CAPEX reduces substantially as the management functionality of Wi Fi network and authentication of users is done as per WANI framework. This framework supports interoperability among operators."
             ],
             "application": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
             ],
             "specification": [
-                "Computing Hardware : 600 MHz MIPS based platform  <br>  Wi Fi Hotspot : IEEE 802.11 b/g/n 2.4 GHz (20/40 MHz bandwidth) with 150 Mbps Data rate  <br>  Backhaul : 1 – Port 10/100 Mbps Auto Ethernet with PoE support  <br>  Configuration : Indoor Unit with indoor antenna  <br>  Antenna : 3 to 7 dBi Rubber deck   <br>  Hotspot Coverage : 30 to 50 meters depending on Antenna  <br>  Power : 5V DC, 1A (5W)  <br>    <br>  Operation  <br>  WANI Framework: using C WANI App or third party App  <br>    <br>  Software  <br>  WANI Framework: C CPS, C AS server and C WANI mobile App"
+                "Computing Hardware : 600 MHz MIPS based platform  <br>  Wi Fi Hotspot : IEEE 802.11 b/g/n 2.4 GHz (20/40 MHz bandwidth) with 150 Mbps Data rate  <br>  Backhaul : 1 - Port 10/100 Mbps Auto Ethernet with PoE support  <br>  Configuration : Indoor Unit with indoor antenna  <br>  Antenna : 3 to 7 dBi Rubber deck   <br>  Hotspot Coverage : 30 to 50 meters depending on Antenna  <br>  Power : 5V DC, 1A (5W)  <br>    <br>  Operation  <br>  WANI Framework: using C WANI App or third party App  <br>    <br>  Software  <br>  WANI Framework: C CPS, C AS server and C WANI mobile App"
             ],
             "features": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
@@ -1020,7 +1042,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/miniPDO.png"]
         },
         "PDO": {
             "describe": [
@@ -1030,7 +1053,7 @@
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
             ],
             "specification": [
-                "Computing Hardware : Based on C DOT thin client board  <br>  Wi Fi Hotspot : IEEE 802.11 b/g/n 2.4 GHz (20/40 MHz bandwidth) with 150 Mbps Data rate and 2X2 MIMO  <br>  Dual Backhaul : 1 – Ethernet Port 10/100 Mbps and Point to Point from nearest POP over Wi Fi  <br>  Configuration : Indoor Unit with indoor or outdoor antenna  <br>  Authentication : Open/WPA/WPA2/WPA Enterprise, 802.1x/EAP (Local or Central AAA database)  <br>    <br>  Operation  <br>  Standalone: User Friendly Web Based GUI or Android based APP  <br>    <br>  Software  <br>  Standalone Mode:   <br>    <br/>   • Captive Portal with configurable landing page  <br>    <br/>   • Controller, AAA database, Voucher Generation, Management & Distribution (sms or print)  <br>    <br/>   • Billing: Volume based, Time based, Bandwidth based all are at PDO."
+                "Computing Hardware : Based on C DOT thin client board  <br>  Wi Fi Hotspot : IEEE 802.11 b/g/n 2.4 GHz (20/40 MHz bandwidth) with 150 Mbps Data rate and 2X2 MIMO  <br>  Dual Backhaul : 1 - Ethernet Port 10/100 Mbps and Point to Point from nearest POP over Wi Fi  <br>  Configuration : Indoor Unit with indoor or outdoor antenna  <br>  Authentication : Open/WPA/WPA2/WPA Enterprise, 802.1x/EAP (Local or Central AAA database)  <br>    <br>  Operation  <br>  Standalone: User Friendly Web Based GUI or Android based APP  <br>    <br>  Software  <br>  Standalone Mode:   <br>    <br/>   • Captive Portal with configurable landing page  <br>    <br/>   • Controller, AAA database, Voucher Generation, Management & Distribution (sms or print)  <br>    <br/>   • Billing: Volume based, Time based, Bandwidth based all are at PDO."
             ],
             "features": [
                 "C Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
@@ -1052,11 +1075,12 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/wireless/PDO.png"]
         },
         "Outdoor HSAP (Sabal)": {
             "specification": [
-                " <br/>   • Supports 802.1Q  <br>    <br/>   • Complied to Wi Fi alliance standards WMM, WMM PS, 802.11d, 802.11h and 802.11e  <br>    <br/>   • Two RJ 45 ethernet ports of 10/100/1000 Mbps  <br>    <br/>   • Up to 26 dBm of output power per radio  <br>    <br/>   • 0° to 40° C   Operating temperature range; 10% to 90% non condensing humidity range.  <br>    <br/>   • IP65/IP66 compliant  <br>    <br/>   • Protocol: Supports IPv4 & IPv6 and Extensible Authentication Protocol (EAP) – TLS, TTLS, MSCHAPv2, PEAP v0, EAP MSCHAPv2, PEAP v1, FAST, EAP SIM, EAP AKA  <br>    <br/>   • Security: Supports WPA/WPA2 PSK, 802.1X authentication, including AES, and TKIP (in conjunction with AC)  <br>    <br/>   • Complied to TEC specifications & AP GR"
+                " <br/>   • Supports 802.1Q  <br>    <br/>   • Complied to Wi Fi alliance standards WMM, WMM PS, 802.11d, 802.11h and 802.11e  <br>    <br/>   • Two RJ 45 ethernet ports of 10/100/1000 Mbps  <br>    <br/>   • Up to 26 dBm of output power per radio  <br>    <br/>   • 0° to 40° C   Operating temperature range; 10% to 90% non condensing humidity range.  <br>    <br/>   • IP65/IP66 compliant  <br>    <br/>   • Protocol: Supports IPv4 & IPv6 and Extensible Authentication Protocol (EAP) - TLS, TTLS, MSCHAPv2, PEAP v0, EAP MSCHAPv2, PEAP v1, FAST, EAP SIM, EAP AKA  <br>    <br/>   • Security: Supports WPA/WPA2 PSK, 802.1X authentication, including AES, and TKIP (in conjunction with AC)  <br>    <br/>   • Complied to TEC specifications & AP GR"
             ]
         },
         "Indoor HSAP (Sabal)": {
@@ -1067,7 +1091,7 @@
                 "Sorry I am not able to get information about this section. Could you please ask me again with other detail of the product?"
             ],
             "specification": [
-                " <br/>   • Supports 802.1Q  <br>    <br/>   • Complied to Wi Fi alliance standards WMM, WMM PS, 802.11d, 802.11h and 802.11e  <br>    <br/>   • Two RJ 45 Ethernet ports of 10/100/1000 Mbps  <br>    <br/>   • Up to 26 dBm of output power per radio  <br>    <br/>   • 0° to 40° C   Operating temperature range; 10% to 90% non condensing humidity range  <br>    <br/>   • Protocol: Supports IPv4 & IPv6 and Extensible Authentication Protocol (EAP) – TLS, TTLS, MSCHAPv2, PEAP v0, EAP MSCHAPv2, PEAP v1, FAST, EAP SIM, EAP AKA  <br>    <br/>   • Security: Supports WPA/WPA2 PSK, 802.1X authentication, including AES, and TKIP (in conjunction with AC)  <br>    <br/>   • Complied to TEC specifications & AP GR  <br>    <br/>   • Table Top and Wall Mount models available"
+                " <br/>   • Supports 802.1Q  <br>    <br/>   • Complied to Wi Fi alliance standards WMM, WMM PS, 802.11d, 802.11h and 802.11e  <br>    <br/>   • Two RJ 45 Ethernet ports of 10/100/1000 Mbps  <br>    <br/>   • Up to 26 dBm of output power per radio  <br>    <br/>   • 0° to 40° C   Operating temperature range; 10% to 90% non condensing humidity range  <br>    <br/>   • Protocol: Supports IPv4 & IPv6 and Extensible Authentication Protocol (EAP) - TLS, TTLS, MSCHAPv2, PEAP v0, EAP MSCHAPv2, PEAP v1, FAST, EAP SIM, EAP AKA  <br>    <br/>   • Security: Supports WPA/WPA2 PSK, 802.1X authentication, including AES, and TKIP (in conjunction with AC)  <br>    <br/>   • Complied to TEC specifications & AP GR  <br>    <br/>   • Table Top and Wall Mount models available"
             ],
             "features": [
                 "• Aggregate data rate throughput of 1,733 Mbps on single radio with 160 MHz radio spectrum in 5 GHz ISM band  <br/>   • High Receive Sensitivity &gt;  90 dBm  <br/>   • Active operator sharing, VLAN tagging, user based QOS, Multiple SSID  <br/>   • Supports Omni directional / directional patterns  <br/>   • System management using C DOT EMS and NMS  <br/>   • Supports 20/40/80/160 MHz channel bandwidths  <br/>   • Integrated NAT, DHCP support and Routing support  <br/>   • Robust design for durability  <br/>   • Wall / Ceiling mountable  <br/>   • 10G backhaul for high bandwidth applications  <br/>   • Dual power operation using power adaptor and POE. Compatible with 802.3 at /af Power over Ethernet (PoE) /AC/DC adapter  <br/>   • Configuration, Management using C DOT Wi Fi Access controller (WAC)"
@@ -1089,7 +1113,8 @@
             ],
             "ToT Partners": [
                 "Comint, tarang, ITI limited are the ToT partners of C DOT Indoor HSAP (Sabal)."
-            ]
+            ],
+            "image": ["img/wireless/indoor_HSAP.png"]
         },
         "Solar Powered WiFi": {
             "describe": [
@@ -1220,7 +1245,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/ccsp_m2m.png"]
         },
         "Secure unified Communication": {
             "describe": [
@@ -1252,7 +1278,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/secured_communication.png"]
         },
         "Intrusion Detection System": {
             "describe": [
@@ -1348,7 +1375,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/mcx.png"]
         },
         "CDOTmeet": {
             "describe": [
@@ -1383,7 +1411,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/cdotmeet.png"]
         },
         "ASTR": {
             "describe": [
@@ -1415,7 +1444,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/ASTR.png"]
         },
         "CIAS on ANDROID": {
             "describe": [
@@ -1447,7 +1477,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/CIAS_Android.png"]
         },
         "CIAS": {
             "describe": [
@@ -1479,7 +1510,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/CIAS.png"]
         },
         "Brochure PDF": {
         "name": "CISS Brochure",
@@ -1517,7 +1549,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/samvad.png"]
         },
         "IN Solution": {
             "describe": [
@@ -1613,7 +1646,8 @@
             ],
             "ToT Partners": [
                 "ECIL and  ITI Ltd. are the ToT partners for Gyan Setu."
-            ]
+            ],
+            "image" : ["img/soft_app/gyansetu.jpg"]
         },
         "GIS network Digitalization Tool": {
             "describe": [
@@ -1677,7 +1711,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/teleplannet.png"]
         },
         "Tower Monitoring System (TMS)": {
             "describe": [
@@ -1741,7 +1776,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/smar_surveillance.png"]
         },
         "Smart Light System": {
             "describe": [
@@ -1773,7 +1809,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/soft_app/smart_light_systems.png"]
         }
     },
     "PM WAN": {
@@ -1808,7 +1845,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image" : ["img/pmwani/cr.jpg"]
         },
         "WAYU": {
             "describe": [
@@ -1843,7 +1881,8 @@
             ],
             "ToT Partners": [
                 "Indian Telephone Industries (ITI) Limited is the TOT partner of WAYU"
-            ]
+            ],
+            "image" : ["img/pmwani/wayu.jpg"]
         },
         "WAP": {
             "describe": [
@@ -1878,7 +1917,8 @@
             ],
             "Roles and Responsiblites": [
                 "<b>For PDO</b><ul><li>Identifying PDOA or collaborating with PDOA to become a PDO</li><li>Arranging Internet Backhaul for the Access Points from TSP/ISP on commercial basis as PDO</li><li>Arranging for power and physical/civil infrastructure for Access Points installation</li><li>Arranging Access points from C DOT Technology Manufacturing partners</li></ul><b>For C DOT</b><ul><li>Providing WANI Compliant software to C DOT Technology Manufacturing partners</li><li>Software support for Access Points</li><li>Software upgrade of Access points</li></ul><b>For PDO Supplier</b><ul><li>Testing of Access point for WANI</li><li>Hardware support for Access Points</li></ul>  "
-            ]
+            ],
+            "image" : ["img/pmwani/wap.png"]
         },
         "C WANI App": {
             "describe": [
@@ -1913,7 +1953,8 @@
             ],
             "Role and Responsiblities": [
                 "<b>For C DOT</b><ul><li>Cloud Infrastructure provide by C DOT</li><li>Customization of APP as per customer inputs</li><li>Integration with API of bulk SMS as provided by customer</li><li>Testing of the customized App</li><li>Hosting the App backend on the cloud</li><li>Certification of App Provider</li><li>Providing basic training of managing the App backend</li><li>Monitoring of the App backend stack</li><li>Software bug fix/support for APP</li><li>Software upgrade of APP backend</li></ul><b>For APP Provider</b><ul><li>DLT Registration for SMS</li><li>Providing inputs for customization of the APP</li><li>Creating an Android account to host the App</li><li>Hosting the tested App</li><li>Certification of App Provider</li></ul>  "
-            ]
+            ],
+            "image" : ["img/pmwani/cwani.png"]
         },
         "PDOA Stack": {
             "describe": [
@@ -1948,7 +1989,8 @@
             ],
             "Roles & Responsibilities": [
                 " <br/>   • For C DOT   <br/>   • Cloud Infrastructure provided by C DOT   <br/>   • Customization of PDOA Stack as per customer inputs   <br/>   • Integration with Razorpay account details as provided by customer   <br/>   • Testing of the customized PDOA Stack   <br/>   • Hosting of the PDOA Stack   <br/>   • Certification of PDOA   <br/>   • Providing basic training for using the stack   <br/>   • Monitoring of the PDOA stack on cloud   <br/>   • Software bug fix/support for PDOA Stack   <br/>   • Software upgrade of PDOA Stack    <br/>     For PDOA   <br/>   • Arranging for Razorpay payment account   <br/>   • Providing inputs for customization of the captive portal page and plans   <br/>   • Certification of PDOA   <br/>   • Keeping backup of logs required as per Security Guidelines "
-            ]
+            ],
+            "image" : ["img/pmwani/pdoa.jpg"]
         }
     },
     "Broadcast and converged Solution": {
@@ -1983,7 +2025,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+             "image": ["img/broadcast/cableSTB.png"]
         },
         "IPTV": {
             "describe": [
@@ -2015,7 +2058,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/broadcast/IPTV.png"]
         },
         "BBG": {
             "describe": [
@@ -2047,7 +2091,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/broadcast/BBG.png"]
         },
         "Terrestrial to Wi Fi Gateway": {
             "describe": [
@@ -2079,7 +2124,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/broadcast/DVB-WiFi.png"]
         },
         "SMS": {
             "describe": [
@@ -2111,7 +2157,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/broadcast/SMS.png"]
         },
         "C CAS": {
             "describe": [
@@ -2143,7 +2190,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/broadcast/C-CAS.png"]
         },
         "DTH STB": {
             "describe": [
@@ -2175,7 +2223,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/broadcast/DTH_STB.png"]
         }
     },
     "Disaster Managment Solutions": {
@@ -2210,7 +2259,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/dms/cap.png"]
         },
         "C DOT Cell Broadcast Solution": {
             "describe": [
@@ -2242,7 +2292,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/dms/cbs.png"]
         }
     },
     "Post Quantum Cryptography": {
@@ -2277,7 +2328,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/pqc/cem.png"]
         },
         "PINE ( Post Quantum In Line Network Encryptor )": {
             "describe": [
@@ -2309,7 +2361,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/pqc/pine.png"]
         },
         "QSSVIP ( Quantum Secure Smart Video IP Phone )": {
             "describe": [
@@ -2341,7 +2394,8 @@
             ],
             "ToT Partners": [
                 "Sorry, I am not able to get information about this section. Could you please ask me again with other detail of the product?"
-            ]
+            ],
+            "image": ["img/pqc/qssvip.png"]
         }
     },
     "Security Solution": {

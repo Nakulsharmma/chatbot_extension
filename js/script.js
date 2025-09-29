@@ -135,7 +135,7 @@ function showProductsInCategory(categoryName) {
             ? `<i class="fas fa-file-pdf" style="font-size:64px; color:#e63946; display:flex; align-items:center; justify-content:center; width:100%; height:100%;"></i>`
             : product.doc
             ? `<i class="fas fa-file-word" style="font-size:64px; color:#2b579a; display:flex; align-items:center; justify-content:center; width:100%; height:100%;"></i>`
-            : `<img src="${product.img || productsData[categoryName].image}" alt="${productName}">`
+            : `<img src="${product.image || productsData[categoryName].image}" alt="${productName}">`
         }
       </div>
       <div class="product-info">
