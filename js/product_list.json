@@ -2246,6 +2246,119 @@
             "image" : ["img/soft_app/smart_light_systems.png"]
         }
     },
+    "Legacy Products & Solutions": {
+        "image": "img/legacy.jpg", 
+        "ATM": {
+        "description": "C-DOT has designed an ATM (Asynchronous Transfer Mode) technology based broadband switching system. The solution consists of an ATM switch for use in the backbone network and an NIU (Network Interface Unit) for use in the access network. The ATM switch provides the ATM interfaces for connecting the ATM devices to it and offers voice and data services to them. The NIU provides the non-ATM interfaces for connecting the non-ATM devices over the ATM backbone. The switching capacity of an ATM switch is 5 Gbps and the solution is scalable and fault-tolerant.",
+        "features": [
+            "Duplex Redundancy of Network Health Monitoring System (NHMS)",
+            "Network Time-of-day Synchronization",
+            "Physical Layer Protection Switching",
+            "ATM Layer Protection Switching",
+            "Flash Programming from Local Management System",
+            "SNMP based Network Management"
+        ],
+        "specifications": [
+            "The solution is compliant to ITU-T, ATM Forum and IETF standards."
+        ],
+        "applications": null,
+        "deployments": null,
+        "documents": [
+            "https://www.cdot.in/cdotweb/assets/docs/products/legacy/ATM.pdf#zoom=50"
+        ],
+        "videos": [],
+        "roles_responsibilities": null,
+        "tot_partners": null        },
+        "RAX": {
+        "description": "It is a digital, stored, program-controlled switching system with 256 terminations or ports. It employs a non-blocking 4-wire PCM switching network. Offering a low investment telephone service in rural areas, however far flung they may be.\r\n\r\nIdeal for Rural Conditions\r\n\r\nIt is ideal for rural applications since it provides immediate basic telephone connections with practically no infrastructure.",
+        "features": null,
+        "specifications": null,
+        "applications": null,
+        "deployments": null,
+        "documents": [
+            "https://www.cdot.in/cdotweb/assets/docs/products/legacy/256pRAX.pdf#zoom=50"
+        ],
+        "videos": [],
+        "roles_responsibilities": null,
+        "tot_partners": [
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/keltron.png",
+            "alt_text": "keltron  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/iti.png",
+            "alt_text": "iti  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/il.jpg",
+            "alt_text": "il  Logo"
+            }
+        ],
+        "image" : ["img/legacy/256pRAX.gif"]
+        },
+        "MAX": {
+        "description": "The C-DOT Digital Switching System Main Automatic Exchange (MAX) is a family of digital switching systems which offers a total switching solution for national telecom networks. The C-DOT DSS MAX products have the proven ability to serve as local, toll, transit and Integrated Local-cum-Transit (ILT) switches. Starting from a switch that supports a few hundred lines for rural applications, to the 40,000-line main switch for central office applications the modular architecture of the C-DOT DSS MAX is capable of serving the needs of the entire range of customers.",
+        "features": null,
+        "specifications": null,
+        "applications": null,
+        "deployments": null,
+        "documents": [
+            "https://www.cdot.in/cdotweb/assets/docs/products/legacy/MAX.pdf#zoom=50"
+        ],
+        "videos": [],
+        "roles_responsibilities": null,
+        "tot_partners": [
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/bel.png",
+            "alt_text": "bel  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/ecil.png",
+            "alt_text": "ecil  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/iti.png",
+            "alt_text": "iti  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/il.jpg",
+            "alt_text": "il  Logo"
+            }
+        ],
+        "image" : ["img/legacy/MAX.gif"]
+        },
+        "AN-RAX": {
+        "description": "The 256 AN-RAX from C-DOT is a world-class cost-effective communication solution for rural areas. Developed with the sole purpose of transforming the villages by removing natural barriers to progress through its versatility in any environment-hot tropical areas, subzero mountainous regions, vast deserts and coastal area, the 256P AN-RAX is an Access Network product.",
+        "features": null,
+        "specifications": null,
+        "applications": null,
+        "deployments": null,
+        "documents": [
+            "https://www.cdot.in/cdotweb/assets/docs/products/legacy/AN-RAX.pdf#zoom=50"
+        ],
+        "videos": [],
+        "roles_responsibilities": null,
+        "tot_partners": [
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/bel.png",
+            "alt_text": "bel  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/ecil.png",
+            "alt_text": "ecil  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/iti.png",
+            "alt_text": "iti  Logo"
+            },
+            {
+            "image_url": "https://www.cdot.in/cdotweb/assets/img/products/tot/il.jpg",
+            "alt_text": "il  Logo"
+            }
+        ],
+        "image" : ["img/legacy/AN-RAX.gif"]
+        }
+    },
     "PM WAN": {
         "image": "img/pmwani.jpg", 
         "CR": {
