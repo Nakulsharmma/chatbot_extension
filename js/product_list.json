@@ -1949,8 +1949,8 @@
         "Brochure PDF": {
         "name": "CISS Brochure",
         "desc": "Click to view our brochure PDF with detailed information.",
-        "img": "img/pdf-icon.png",   
-        "pdf": "pdf/CISS_Brochure.docx"
+        "img": "img/cctv.png",   
+        "pdf": "pdf/CISS_Brochure.pdf"
         },
         "Samvad": {
             "describe": [
