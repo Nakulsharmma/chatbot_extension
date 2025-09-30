@@ -375,6 +375,7 @@ function downloadPdf(fileUrl, productName) {
 }
 
 // Show product details
+// Show product details with tab system
 function showProductDetails(categoryName, productName) {
   currentCategory = categoryName;
   currentProduct = productName;
@@ -391,76 +392,133 @@ function showProductDetails(categoryName, productName) {
   if (backButton) backButton.style.display = "none";
 
   details.style.display = "block";
-  detailName.textContent = productName;
-  detailImg.src = product.image || productsData[categoryName].image;
   
-  // Handle describe field (could be array or string)
-  if (product.describe) {
-    if (Array.isArray(product.describe)) {
-      detailDesc.innerHTML = product.describe[0] || "";
-    } else {
-      detailDesc.innerHTML = product.describe;
-    }
-  } else {
-    detailDesc.innerHTML = "";
-  }
+  // Create tab system structure
+  details.innerHTML = `
+    <div class="product-header">
+    <div class="back-button" onclick="showProductsInCategory('${categoryName}')">
+        <i class="fas fa-arrow-left"></i> Back to Sub Products
+    </div>
+      <h1 id="detailName">${productName}</h1>
+      <div class="product-meta">
+        <img id="detailImg" src="${product.image || productsData[categoryName].image}" alt="${productName}">
+        <div class="product-description" id="detailDesc">
+          ${product.describe ? (Array.isArray(product.describe) ? product.describe[0] : product.describe) : ''}
+        </div>
+      </div>
+    </div>
 
-  // Clear previous content
-  detailFeatures.innerHTML = "";
-  detailSpecifications.innerHTML = "";
-  detailApplications.innerHTML = "";
-  detailDeployments.innerHTML = "";
-  detailDocuments.innerHTML = "";
+    <div class="details-tabs">
+      ${product.features ? `<button class="tab-button active" onclick="switchTab('featuresTab')">
+        Features
+      </button>` : ''}
+      
+      ${product.specification ? `<button class="tab-button" onclick="switchTab('specificationsTab')">
+        <i class="fas fa-info-circle"></i> Specifications
+      </button>` : ''}
+      
+      ${product.application ? `<button class="tab-button" onclick="switchTab('applicationsTab')">
+        <i class="fas fa-check-circle"></i> Applications
+      </button>` : ''}
+      
+      ${product.Deployments ? `<button class="tab-button" onclick="switchTab('deploymentsTab')">
+        <i class="fas fa-location-arrow"></i> Deployments
+      </button>` : ''}
+      
+      ${product.Document ? `<button class="tab-button" onclick="switchTab('documentsTab')">
+        <i class="fas fa-file-alt"></i> Documents
+      </button>` : ''}
+    </div>
 
-  if (product.features) {
-    detailFeatures.innerHTML = `
-      <ul>${product.features.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('')}</ul>
-    `;
-  }
+    <!-- Tab Contents -->
+    <div class="tab-content-container">
+      ${product.features ? `
+        <div id="featuresTab" class="tab-content active tab-content-full">
+          <h3><i class="fas fa-check"></i> Features</h3>
+          <ul>
+            ${product.features.map(f => `<li> ${f}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
 
-  if (product.specification) {
-    detailSpecifications.innerHTML = `
-      <ul>${product.specification.map(s => `<li><i class="fas fa-info-circle"></i> ${s}</li>`).join('')}</ul>
-    `;
-  }
+      ${product.specification ? `
+        <div id="specificationsTab" class="tab-content tab-content-full">
+          <h3><i class="fas fa-info-circle"></i> Specifications</h3>
+          <ul>
+            ${product.specification.map(s => `<li> ${s}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
 
-  if (product.application) {
-    detailApplications.innerHTML = `
-      <ul>${product.application.map(a => `<li><i class="fas fa-check-circle"></i> ${a}</li>`).join('')}</ul>
-    `;
-  }
+      ${product.application ? `
+        <div id="applicationsTab" class="tab-content tab-content-full">
+          <h3><i class="fas fa-check-circle"></i> Applications</h3>
+          <ul>
+            ${product.application.map(a => `<li>${a}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
 
-  if (product.Deployments) {
-    detailDeployments.innerHTML = `
-      <ul>${product.Deployments.map(d => `<li><i class="fas fa-location-arrow"></i> ${d}</li>`).join('')}</ul>
-    `;
-  }
+      ${product.Deployments ? `
+        <div id="deploymentsTab" class="tab-content tab-content-full">
+          <h3><i class="fas fa-location-arrow"></i> Deployments</h3>
+          <ul>
+            ${product.Deployments.map(d => `<li>${d}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
 
-  // Handle document links in details
-  if (product.Document && product.Document.length > 0) {
-    detailDocuments.innerHTML = `
-      <ul>
-        ${product.Document.map(doc => {
-          const urlMatch = doc.match(/(https?:\/\/[^\s]+)/);
-          const url = urlMatch ? urlMatch[0] : '#';
-          const displayText = doc.replace(url, '').trim() || 'Document';
-          const isDocx = url.toLowerCase().endsWith('.docx');
-          const isPdf = url.toLowerCase().endsWith('.pdf');
-          
-          if (isDocx) {
-            return `<li><i class="fas fa-external-link-alt"></i> <a href="javascript:void(0)" onclick="showDocxPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
-          } else if (isPdf) {
-            return `<li><i class="fas fa-external-link-alt"></i> <a href="javascript:void(0)" onclick="showPdfPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
-          } else {
-            return `<li><i class="fas fa-download"></i> <a href="${url}" download>${displayText}</a></li>`;
-          }
-        }).join('')}
-      </ul>
-    `;
-  }
+      ${product.Document ? `
+        <div id="documentsTab" class="tab-content tab-content-full">
+          <h3><i class="fas fa-file-alt"></i> Documents</h3>
+          <ul>
+            ${product.Document.map(doc => {
+              const urlMatch = doc.match(/(https?:\/\/[^\s]+)/);
+              const url = urlMatch ? urlMatch[0] : '#';
+              const displayText = doc.replace(url, '').trim() || 'Document';
+              const isDocx = url.toLowerCase().endsWith('.docx');
+              const isPdf = url.toLowerCase().endsWith('.pdf');
+              
+              if (isDocx) {
+                return `<li> <a href="javascript:void(0)" onclick="showDocxPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
+              } else if (isPdf) {
+                return `<li><a href="javascript:void(0)" onclick="showPdfPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
+              } else {
+                return `<li><a href="${url}" download>${displayText}</a></li>`;
+              }
+            }).join('')}
+          </ul>
+        </div>
+      ` : ''}
+    </div>
+  `;
 
-  activatePanel('featuresPanel');
   details.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Tab switching function
+function switchTab(tabId) {
+  // Hide all tab contents
+  document.querySelectorAll('.tab-content').forEach(tab => {
+    tab.classList.remove('active');
+  });
+  
+  // Remove active class from all tab buttons
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.classList.remove('active');
+  });
+  
+  // Show selected tab content
+  const activeTab = document.getElementById(tabId);
+  if (activeTab) {
+    activeTab.classList.add('active');
+  }
+  
+  // Activate clicked tab button
+  event.currentTarget.classList.add('active');
+  
+  // Scroll to top of tab content
+  activeTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // Show categories
@@ -511,6 +569,7 @@ function activatePanel(panelId) {
 // Hide details and go back
 function hideDetails() {
   details.style.display = "none";
+  details.innerHTML = ""; // Clear tab content
   if (currentCategory && currentProduct) {
     productGrid.style.display = "grid";
     productGrid.scrollIntoView({ behavior: 'smooth' });
