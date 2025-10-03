@@ -473,18 +473,19 @@ function showProductDetails(categoryName, productName) {
           <h3><i class="fas fa-file-alt"></i> Documents</h3>
           <ul>
             ${product.Document.map(doc => {
-              const urlMatch = doc.match(/(https?:\/\/[^\s]+)/);
-              const url = urlMatch ? urlMatch[0] : '#';
-              const displayText = doc.replace(url, '').trim() || 'Document';
-              const isDocx = url.toLowerCase().endsWith('.docx');
-              const isPdf = url.toLowerCase().endsWith('.pdf');
+              const urlMatch = doc.match(/(https?:\/\/[^\s]+|[^ ]+\.(pdf|docx))/i);
+              const url = urlMatch ? getAbsoluteUrl(urlMatch[0]) : '#';
+              const displayText = doc.replace(urlMatch ? urlMatch[0] : '', '').trim() || 'Document';
+              const lowerUrl = url.toLowerCase();
+              const isDocx = lowerUrl.endsWith('.docx');
+              const isPdf = lowerUrl.endsWith('.pdf');
               
               if (isDocx) {
-                return `<li> <a href="javascript:void(0)" onclick="showDocxPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
+                return `<li><a href="javascript:void(0)" onclick="showDocxPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
               } else if (isPdf) {
                 return `<li><a href="javascript:void(0)" onclick="showPdfPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
               } else {
-                return `<li><a href="${url}" download>${displayText}</a></li>`;
+                return `<li><a href="${url}" target="_blank" rel="noopener">${displayText}</a></li>`;
               }
             }).join('')}
           </ul>
@@ -520,6 +521,14 @@ function switchTab(tabId) {
   // Scroll to top of tab content
   activeTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+function getAbsoluteUrl(fileUrl) {
+  if (fileUrl.startsWith('http://') || fileUrl.startsWith('https://')) {
+    return fileUrl;
+  }
+  return window.location.origin + '/' + fileUrl;
+}
+
 
 // Show categories
 function showCategories() {
