@@ -374,12 +374,55 @@ function downloadPdf(fileUrl, productName) {
   document.body.removeChild(link);
 }
 
-// Show product details
 // Show product details with tab system
 function showProductDetails(categoryName, productName) {
   currentCategory = categoryName;
   currentProduct = productName;
   const product = productsData[categoryName][productName];
+
+  // Function to check if data is valid (not "No data found")
+  const isValidData = (data) => {
+    if (!data) return false;
+    if (Array.isArray(data)) {
+      return data.length > 0 && !data.every(item => 
+        item === "No data found"
+      );
+    }
+    return data !== "No data found" && !data.toLowerCase().includes('no data');
+  };
+
+  // Check which tabs have valid data
+  const hasFeatures = product.features && isValidData(product.features);
+  const hasSpecifications = product.specification && isValidData(product.specification);
+  const hasApplications = product.applications && isValidData(product.applications);
+  const hasDeployments = product.deployments && isValidData(product.deployments);
+  const hasEventsAwards = product['Event and Awards'] && isValidData(product['Event and Awards']);
+  const hasPartners = product.tot_partners && isValidData(product.tot_partners);
+  const hasVideo = product.Video && isValidData(product.Video);
+  const hasDocuments = product.Document && isValidData(product.Document);
+
+  // Determine which tab should be active by default
+  let defaultActiveTab = '';
+  const legacyProductsWithPartners = ['RAX', 'MAX', 'AN-RAX'];
+  
+  // Priority order for active tab
+  if (legacyProductsWithPartners.includes(productName) && hasPartners) {
+    defaultActiveTab = 'partnersTab';
+  } else if (hasFeatures) {
+    defaultActiveTab = 'featuresTab';
+  } else if (hasSpecifications) {
+    defaultActiveTab = 'specificationsTab';
+  } else if (hasApplications) {
+    defaultActiveTab = 'applicationsTab';
+  } else if (hasDeployments) {
+    defaultActiveTab = 'deploymentsTab';
+  } else if (hasEventsAwards) {
+    defaultActiveTab = 'eventsAwardsTab';
+  } else if (hasVideo) {
+    defaultActiveTab = 'videoTab';
+  } else if (hasDocuments) {
+    defaultActiveTab = 'documentsTab';
+  }
 
   breadcrumb.innerHTML = `
     <a onclick="showCategories()">Products</a> <i class="fas fa-chevron-right"></i> 
@@ -396,9 +439,9 @@ function showProductDetails(categoryName, productName) {
   // Create tab system structure
   details.innerHTML = `
     <div class="product-header">
-    <div class="back-button" onclick="showProductsInCategory('${categoryName}')">
+      <div class="back-button" onclick="showProductsInCategory('${categoryName}')">
         <i class="fas fa-arrow-left"></i> Back to Sub Products
-    </div>
+      </div>
       <h1 id="detailName">${productName}</h1>
       <div class="product-meta">
         <img id="detailImg" src="${product.image || productsData[categoryName].image}" alt="${productName}">
@@ -408,94 +451,185 @@ function showProductDetails(categoryName, productName) {
       </div>
     </div>
 
-    <div class="details-tabs">
-      ${product.features ? `<button class="tab-button active" onclick="switchTab('featuresTab')">
-        Features
-      </button>` : ''}
-      
-      ${product.specification ? `<button class="tab-button" onclick="switchTab('specificationsTab')">
-        <i class="fas fa-info-circle"></i> Specifications
-      </button>` : ''}
-      
-      ${product.application ? `<button class="tab-button" onclick="switchTab('applicationsTab')">
-        <i class="fas fa-check-circle"></i> Applications
-      </button>` : ''}
-      
-      ${product.Deployments ? `<button class="tab-button" onclick="switchTab('deploymentsTab')">
-        <i class="fas fa-location-arrow"></i> Deployments
-      </button>` : ''}
-      
-      ${product.Document ? `<button class="tab-button" onclick="switchTab('documentsTab')">
-        <i class="fas fa-file-alt"></i> Documents
-      </button>` : ''}
-    </div>
+    ${defaultActiveTab ? `
+      <div class="details-tabs">
+        ${hasFeatures ? `<button class="tab-button ${defaultActiveTab === 'featuresTab' ? 'active' : ''}" onclick="switchTab('featuresTab')">
+          <i class="fas fa-star"></i> Features
+        </button>` : ''}
+        
+        ${hasSpecifications ? `<button class="tab-button ${defaultActiveTab === 'specificationsTab' ? 'active' : ''}" onclick="switchTab('specificationsTab')">
+          <i class="fas fa-info-circle"></i> Specifications
+        </button>` : ''}
+        
+        ${hasApplications ? `<button class="tab-button ${defaultActiveTab === 'applicationsTab' ? 'active' : ''}" onclick="switchTab('applicationsTab')">
+          <i class="fas fa-check-circle"></i> Applications
+        </button>` : ''}
+        
+        ${hasDeployments ? `<button class="tab-button ${defaultActiveTab === 'deploymentsTab' ? 'active' : ''}" onclick="switchTab('deploymentsTab')">
+          <i class="fas fa-location-arrow"></i> Deployments
+        </button>` : ''}
+        
+        ${hasEventsAwards ? `<button class="tab-button ${defaultActiveTab === 'eventsAwardsTab' ? 'active' : ''}" onclick="switchTab('eventsAwardsTab')">
+          <i class="fas fa-trophy"></i> Events & Awards
+        </button>` : ''}
+        
+        ${hasPartners ? `<button class="tab-button ${defaultActiveTab === 'partnersTab' ? 'active' : ''}" onclick="switchTab('partnersTab')">
+          <i class="fas fa-handshake"></i> TOT Partners
+        </button>` : ''}
+        
+        ${hasVideo ? `<button class="tab-button ${defaultActiveTab === 'videoTab' ? 'active' : ''}" onclick="switchTab('videoTab')">
+          <i class="fas fa-video"></i> Video
+        </button>` : ''}
+        
+        ${hasDocuments ? `<button class="tab-button ${defaultActiveTab === 'documentsTab' ? 'active' : ''}" onclick="switchTab('documentsTab')">
+          <i class="fas fa-file-alt"></i> Documents
+        </button>` : ''}
+      </div>
 
-    <!-- Tab Contents -->
-    <div class="tab-content-container">
-      ${product.features ? `
-        <div id="featuresTab" class="tab-content active tab-content-full">
-          <h3><i class="fas fa-check"></i> Features</h3>
-          <ul>
-            ${product.features.map(f => `<li> ${f}</li>`).join('')}
-          </ul>
-        </div>
-      ` : ''}
+      <!-- Tab Contents -->
+      <div class="tab-content-container">
+        ${hasFeatures ? `
+          <div id="featuresTab" class="tab-content ${defaultActiveTab === 'featuresTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-check"></i> Features</h3>
+            <ul>
+              ${product.features.map(f => `<li> ${f}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
 
-      ${product.specification ? `
-        <div id="specificationsTab" class="tab-content tab-content-full">
-          <h3><i class="fas fa-info-circle"></i> Specifications</h3>
-          <ul>
-            ${product.specification.map(s => `<li> ${s}</li>`).join('')}
-          </ul>
-        </div>
-      ` : ''}
+        ${hasSpecifications ? `
+          <div id="specificationsTab" class="tab-content ${defaultActiveTab === 'specificationsTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-info-circle"></i> Specifications</h3>
+            <ul>
+              ${product.specification.map(s => `<li> ${s}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
 
-      ${product.application ? `
-        <div id="applicationsTab" class="tab-content tab-content-full">
-          <h3><i class="fas fa-check-circle"></i> Applications</h3>
-          <ul>
-            ${product.application.map(a => `<li>${a}</li>`).join('')}
-          </ul>
-        </div>
-      ` : ''}
+        ${hasApplications ? `
+          <div id="applicationsTab" class="tab-content ${defaultActiveTab === 'applicationsTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-check-circle"></i> Applications</h3>
+            <ul>
+              ${product.applications.map(a => `<li>${a}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
 
-      ${product.Deployments ? `
-        <div id="deploymentsTab" class="tab-content tab-content-full">
-          <h3><i class="fas fa-location-arrow"></i> Deployments</h3>
-          <ul>
-            ${product.Deployments.map(d => `<li>${d}</li>`).join('')}
-          </ul>
-        </div>
-      ` : ''}
+        ${hasDeployments ? `
+          <div id="deploymentsTab" class="tab-content ${defaultActiveTab === 'deploymentsTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-location-arrow"></i> Deployments</h3>
+            <div class="deployments-content">
+              ${product.deployments.map(deployment => `
+                <div class="deployment-item">
+                  ${deployment.includes('<br>') ? deployment : `<p>${deployment}</p>`}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
 
-      ${product.Document ? `
-        <div id="documentsTab" class="tab-content tab-content-full">
-          <h3><i class="fas fa-file-alt"></i> Documents</h3>
-          <ul>
-            ${product.Document.map(doc => {
-              const urlMatch = doc.match(/(https?:\/\/[^\s]+|[^ ]+\.(pdf|docx))/i);
-              const url = urlMatch ? getAbsoluteUrl(urlMatch[0]) : '#';
-              const displayText = doc.replace(urlMatch ? urlMatch[0] : '', '').trim() || 'Document';
-              const lowerUrl = url.toLowerCase();
-              const isDocx = lowerUrl.endsWith('.docx');
-              const isPdf = lowerUrl.endsWith('.pdf');
-              
-              if (isDocx) {
-                return `<li><a href="javascript:void(0)" onclick="showDocxPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
-              } else if (isPdf) {
-                return `<li><a href="javascript:void(0)" onclick="showPdfPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
-              } else {
-                return `<li><a href="${url}" target="_blank" rel="noopener">${displayText}</a></li>`;
-              }
-            }).join('')}
-          </ul>
-        </div>
-      ` : ''}
-    </div>
+        ${hasEventsAwards ? `
+          <div id="eventsAwardsTab" class="tab-content ${defaultActiveTab === 'eventsAwardsTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-trophy"></i> Events & Awards</h3>
+            <div class="events-awards-content">
+              ${product['Event and Awards'].map(item => `
+                <div class="event-award-item">${item}</div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${hasPartners ? `
+          <div id="partnersTab" class="tab-content ${defaultActiveTab === 'partnersTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-handshake"></i> TOT Partners</h3>
+            <div class="partners-grid">
+              ${product.tot_partners.map(partner => `
+                <div class="partner-card">
+                  <img src="${partner.image_url}" alt="${partner.alt_text}" 
+                       onerror="this.style.display='none'; this.parentNode.innerHTML='<div class=\\'partner-placeholder\\'><i class=\\'fas fa-building\\'></i><span>${partner.alt_text}</span></div>';">
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${hasVideo ? `
+          <div id="videoTab" class="tab-content ${defaultActiveTab === 'videoTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-video"></i> Video</h3>
+            <div class="video-content">
+              ${product.Video.map(video => {
+                // Extract YouTube embed URL
+                const youtubeEmbedRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]+)/;
+                const youtubeWatchRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/;
+                
+                let embedUrl = '';
+                
+                // Check for embed URL
+                const embedMatch = video.match(youtubeEmbedRegex);
+                if (embedMatch) {
+                  embedUrl = `https://www.youtube.com/embed/${embedMatch[1]}`;
+                } else {
+                  // Check for watch URL
+                  const watchMatch = video.match(youtubeWatchRegex);
+                  if (watchMatch) {
+                    embedUrl = `https://www.youtube.com/embed/${watchMatch[1]}`;
+                  } else {
+                    // If no YouTube URL found, show the text as is
+                    return `<div class="video-text">${video}</div>`;
+                  }
+                }
+                
+                return `
+                  <div class="video-container">
+                    <iframe 
+                      src="${embedUrl}" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${hasDocuments ? `
+          <div id="documentsTab" class="tab-content ${defaultActiveTab === 'documentsTab' ? 'active' : ''} tab-content-full">
+            <h3><i class="fas fa-file-alt"></i> Documents</h3>
+            <ul>
+              ${product.Document.map(doc => {
+                const urlMatch = doc.match(/(https?:\/\/[^\s]+|[^ ]+\.(pdf|docx))/i);
+                const url = urlMatch ? getAbsoluteUrl(urlMatch[0]) : '#';
+                const displayText = doc.replace(urlMatch ? urlMatch[0] : '', '').trim() || 'Document';
+                const lowerUrl = url.toLowerCase();
+                const isDocx = lowerUrl.endsWith('.docx');
+                const isPdf = lowerUrl.endsWith('.pdf');
+                
+                if (isDocx) {
+                  return `<li><a href="javascript:void(0)" onclick="showDocxPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
+                } else if (isPdf) {
+                  return `<li><a href="javascript:void(0)" onclick="showPdfPreviewModal('${productName}', '${url}')">${displayText}</a></li>`;
+                } else {
+                  return `<li><a href="${url}" target="_blank" rel="noopener">${displayText}</a></li>`;
+                }
+              }).join('')}
+            </ul>
+          </div>
+        ` : ''}
+      </div>
+    ` : `
+      <div class="no-tabs-message">
+        <i class="fas fa-info-circle"></i>
+        <h3>No additional information available</h3>
+        <p>There is no detailed information available for this product.</p>
+      </div>
+    `}
   `;
 
   details.scrollIntoView({ behavior: 'smooth' });
 }
+
 
 // Tab switching function
 function switchTab(tabId) {
